@@ -115,12 +115,11 @@ footer a {
 
 
 #numbers.btn-group-vertical{
-  width: 80vh;
-  padding-bottom: 20px;
+  width: 100%;
 }
 
 #op.btn-group-vertical{
-  width: 20vh;
+  padding-bottom: -10px;
 }
 
 
