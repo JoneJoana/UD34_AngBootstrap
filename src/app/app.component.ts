@@ -3,9 +3,25 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'UD33_Angular - Calculadora';
-  pTecladoN = [9,8,7,6,5,4,3,2,1,".",0];
+  entrada='';
+  output='';
+
+  add(key: string) {
+    this.entrada = this.entrada+key;
+  }
+
+  calc() {
+    this.output = eval(this.entrada);
+    console.log(this.output);
+  }
+
+  del() {
+    this.entrada = '';
+    this.output = '';
+  }
+
 }
