@@ -1,5 +1,6 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <section id="global">
+
   <div class="container-fluid" id="general">
 
     <div class="row">
@@ -7,58 +8,59 @@
       <div class="col-xs-1 col-sm-3"></div> <!-- columna vacia -->
       <div class="col-xs-10 col-sm-6" id="middle">
         <!-- columna con la calculadora -->
-
-        <!-- creamos dos rows para estructurar -->
-        <div class="row" id="input">
-          <div class="col-sm-12">
-            <input id="entrada" type="text" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-sm" [(ngModel)]="entrada"/>
-            <input id="output" type="text" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-sm" [(ngModel)]="output"/>
-          </div>
-        </div>
-
-        <div class="row" id="paneles">
-          <!-- en esta 2a row, creamos dos columnas de tipo "fijas" -->
-          <div class="col-10">
-
-            <div class="btn-group-vertical" id="numbers" role="group" aria-label="Vertical button group">
-              <div class="btn-group" role="group" aria-label="Second group">
-                <button type="button" class="btn" (click)="add('9')">9</button>
-                <button type="button" class="btn" (click)="add('8')">8</button>
-                <button type="button" class="btn" (click)="add('7')">7</button>
-              </div>
-              <div class="btn-group" role="group" aria-label="Second group">
-                <button type="button" class="btn" (click)="add('6')">6</button>
-                <button type="button" class="btn" (click)="add('5')">5</button>
-                <button type="button" class="btn" (click)="add('4')">4</button>
-              </div>
-              <div class="btn-group" role="group" aria-label="Second group">
-                <button type="button" class="btn" (click)="add('3')">3</button>
-                <button type="button" class="btn" (click)="add('2')">2</button>
-                <button type="button" class="btn" (click)="add('1')">1</button>
-              </div>
-              <div class="btn-group" role="group" aria-label="Second group">
-                <button type="button" class="btn" (click)="add('.')">.</button>
-                <button type="button" class="btn" (click)="add('0')">0</button>
-                <button type="button" class="btn" (click)="add('00')">00</button>
-              </div>
+        <article id="calculadora">
+          <header>Calculadora Básica</header>
+          <!-- creamos dos rows para estructurar -->
+          <div class="row" id="input">
+            <div class="col-sm-12">
+              <input id="entrada" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm" [(ngModel)]="entrada" />
+              <input id="output" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm" [(ngModel)]="output" />
             </div>
           </div>
 
-          <div class="col-2">
-            <div class="btn-group-vertical" id="op" role="group" aria-label="Vertical button group">
-              <button type="button" class="btn btn-sm" id="del" (click)="del()">DEL</button>
-              <button type="button" class="btn btn-sm" id="div" (click)="add('/')">/</button>
-              <button type="button" class="btn btn-sm" id="mult" (click)="add('*')">X</button>
-              <button type="button" class="btn btn-sm" id="rest" (click)="add('-')">-</button>
-              <button type="button" class="btn btn-sm" id="sum" (click)="add('+')">+</button>
-              <button type="button" class="btn btn-sm" id="result" (click)="calc()">=</button>
+          <div class="row" id="paneles">
+            <!-- en esta 2a row, creamos dos columnas de tipo "fijas" -->
+            <div class="col-10">
+
+              <div class="btn-group-vertical" id="numbers" role="group" aria-label="Vertical button group">
+                <div class="btn-group" role="group" aria-label="Second group">
+                  <button type="button" class="btn" (click)="add('9')">9</button>
+                  <button type="button" class="btn" (click)="add('8')">8</button>
+                  <button type="button" class="btn" (click)="add('7')">7</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Second group">
+                  <button type="button" class="btn" (click)="add('6')">6</button>
+                  <button type="button" class="btn" (click)="add('5')">5</button>
+                  <button type="button" class="btn" (click)="add('4')">4</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Second group">
+                  <button type="button" class="btn" (click)="add('3')">3</button>
+                  <button type="button" class="btn" (click)="add('2')">2</button>
+                  <button type="button" class="btn" (click)="add('1')">1</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Second group">
+                  <button type="button" class="btn" (click)="add('.')">.</button>
+                  <button type="button" class="btn" (click)="add('0')">0</button>
+                  <button type="button" class="btn" (click)="add('00')">00</button>
+                </div>
+              </div>
             </div>
+
+            <div class="col-2" id="colOp">
+              <div class="btn-group-vertical" id="op" role="group" aria-label="Vertical button group">
+                <button type="button" class="btn btn-sm" id="del" (click)="del()">DEL</button>
+                <button type="button" class="btn btn-sm" id="div" (click)="add('/')">/</button>
+                <button type="button" class="btn btn-sm" id="mult" (click)="add('*')">X</button>
+                <button type="button" class="btn btn-sm" id="rest" (click)="add('-')">-</button>
+                <button type="button" class="btn btn-sm" id="sum" (click)="add('+')">+</button>
+                <button type="button" class="btn btn-sm" id="result" (click)="calc()">=</button>
+              </div>
+            </div>
+
           </div>
-
-        </div>
-
+        </article>
       </div>
       <!-- 3a columna vacia -->
       <div class="col-xs-1 col-sm-3"></div>
