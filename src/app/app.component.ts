@@ -7,21 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'UD33_Angular - Calculadora';
+  //valores de los inputs
   entrada='';
   output='';
 
-  add(key: string) {
+  add(key: string) { //indicamos que entrara dato tipo string para que lo concatene
     this.entrada = this.entrada+key;
   }
 
-  calc() {
+  calc() { //executa el codigo, een este caso opera
     this.output = eval(this.entrada);
-    console.log(this.output);
   }
 
+  //al eliminar reseteamos a cadena vacia
   del() {
     this.entrada = '';
     this.output = '';
   }
+
+  //faltaria control de errores
 
 }
